@@ -38,7 +38,7 @@ const BookstoreApp = () => {
     e.preventDefault();
     try {
       const url = editingBook 
-        ? `${API_BASE_URL}/book${editingBook.ID}`
+        ? `${API_BASE_URL}/book/${editingBook.ID}`
         : `${API_BASE_URL}/book`;
       
       const method = editingBook ? 'PUT' : 'POST';
