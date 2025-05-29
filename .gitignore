@@ -1,0 +1,153 @@
+# ======================
+# Go (Backend)
+# ======================
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+main.exe
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+
+# Air live reload tool
+tmp/
+
+# ======================
+# Vite/Node.js (Frontend)
+# ======================
+
+# Dependencies
+my-vite-app/node_modules/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+my-vite-app/dist/
+dist/
+build/
+
+# Vite
+my-vite-app/.vite/
+.vite/
+
+# Environment variables
+my-vite-app/.env
+my-vite-app/.env.local
+my-vite-app/.env.development.local
+my-vite-app/.env.test.local
+my-vite-app/.env.production.local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ======================
+# IDE/Editor files
+# ======================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs (IntelliJ, GoLand, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ======================
+# OS generated files
+# ======================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.fseventsd
+.TemporaryItems
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ======================
+# Logs
+# ======================
+logs/
+*.log
+
+# ======================
+# Database files
+# ======================
+*.db
+*.sqlite
+*.sqlite3
+
+# ======================
+# Temporary files
+# ======================
+*.tmp
+*.temp
+.cache/
+
+# ======================
+# Package manager lock files (optional)
+# ======================
+# Uncomment if you want to ignore lock files
+# my-vite-app/package-lock.json
+# my-vite-app/yarn.lock
+# my-vite-app/pnpm-lock.yaml
