@@ -24,12 +24,12 @@ func main() {
 	// Start the HTTP server on port  and log any errors
 	// http.Handle("/",r)
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "9010" // fallback for local development
-	}
+port := os.Getenv("PORT")
+if port == "" {
+    port = "9010" // fallback for local development
+}
 
-	log.Printf("Server started at http://localhost:%s", port)
-	log.Fatal(http.ListenAndServe(":"+port, handler))
+log.Printf("Server started at http://0.0.0.0:%s", port)
+log.Fatal(http.ListenAndServe("0.0.0.0:"+port, handler))
 
 }
