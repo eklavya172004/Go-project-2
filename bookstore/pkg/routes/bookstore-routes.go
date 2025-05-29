@@ -8,9 +8,10 @@ import(
 //this function will gonna have my all the routes
 var RegisterBookstoreRoutes = func(router *mux.Router){
 	//"When someone accesses this URL, call this function."
-	router.HandleFunc("/book/",controllers.CreateBooks).Methods("POST")
-	router.HandleFunc("/book/",controllers.GetBooks).Methods("GET")
-	router.HandleFunc("/book/{bookId}",controllers.GetBooksById).Methods("GET")
-	router.HandleFunc("/book/{bookId}",controllers.UpdateBooks).Methods("PUT")
-	router.HandleFunc("/book/{bookId}",controllers.DeleteBooks).Methods("DELETE")	
+	router.HandleFunc("/book", controllers.CreateBooks).Methods("POST")
+	router.HandleFunc("/book", controllers.GetBooks).Methods("GET")
+	router.HandleFunc("/book/{bookId}", controllers.GetBooksById).Methods("GET")
+	router.HandleFunc("/book/{bookId}", controllers.UpdateBooks).Methods("PUT")
+	router.HandleFunc("/book/{bookId}", controllers.DeleteBooks).Methods("DELETE")	
+
 }
