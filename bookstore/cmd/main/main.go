@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-
+	"os"
 	"github.com/eklavya/go-bookstore/pkg/routes"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
@@ -23,7 +23,13 @@ func main() {
 
 	// Start the HTTP server on port  and log any errors
 	// http.Handle("/",r)
-log.Println("Server started at http://localhost:9010")
-log.Fatal(http.ListenAndServe(":9010", handler))
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "9010" // fallback for local development
+	}
+
+	log.Printf("Server started at http://localhost:%s", port)
+	log.Fatal(http.ListenAndServe(":"+port, handler))
 
 }
