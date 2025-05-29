@@ -22,7 +22,7 @@ func main() {
 	handler := c.Handler(r)
 
 	// Start the HTTP server on port  and log any errors
-	http.Handle("/",r)
+	// http.Handle("/",r)
 log.Println("Server started at http://localhost:9010")
 log.Fatal(http.ListenAndServe(":9010", handler))
 
