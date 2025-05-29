@@ -15,7 +15,7 @@ var NewBook models.Book
 func GetBooks(w http.ResponseWriter,r *http.Request){
 	newBooks := models.GetallBooks()
 	res,_ := json.Marshal(newBooks)
-	w.Header().Set("Content-Type","pkglication/json")// Set the response header to indicate JSON content
+	w.Header().Set("Content-Type","application/json")// Set the response header to indicate JSON content
 	//pkflication/json is a common MIME type used to indicate that the content being sent or received is in JSON format.
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
@@ -33,7 +33,7 @@ func GetBooksById(w http.ResponseWriter,r *http.Request){
 
 	res,_ := json.Marshal(bookDetails)
 
-	w.Header().Set("Content-Type","pkglication/json") // Set the response header to indicate JSON content
+	w.Header().Set("Content-Type","application/json") // Set the response header to indicate JSON content
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
@@ -62,7 +62,7 @@ func DeleteBooks(w http.ResponseWriter,r *http.Request){
 
 	res , _ := json.Marshal(book)
 
-	w.Header().Set("Content-Type","pkglication/json")
+	w.Header().Set("Content-Type","application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
