@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit, Trash2, BookOpen, Search, X } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:9091'; // Adjust this to match your Go server
+const API_BASE_URL = import.meta.env.VITE_API_BASE; // Adjust this to match your Go server
 
 const BookstoreApp = () => {
   const [books, setBooks] = useState([]);
@@ -20,7 +20,7 @@ const BookstoreApp = () => {
   const fetchBooks = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${API_BASE_URL}/book/`);
+      const response = await fetch(`${API_BASE_URL}/book`);
       if (!response.ok) throw new Error('Failed to fetch books');
       const data = await response.json();
       setBooks(Array.isArray(data) ? data : []);
@@ -38,8 +38,8 @@ const BookstoreApp = () => {
     e.preventDefault();
     try {
       const url = editingBook 
-        ? `${API_BASE_URL}/book/${editingBook.ID}`
-        : `${API_BASE_URL}/book/`;
+        ? `${API_BASE_URL}/book${editingBook.ID}`
+        : `${API_BASE_URL}/book`;
       
       const method = editingBook ? 'PUT' : 'POST';
       
